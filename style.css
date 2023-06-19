@@ -11,11 +11,18 @@ html {
     font-family: 'Poppins';
 }
 
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
 body {
     background-color: #1f242d;
     padding-left: 100px;
     padding-right: 100px;
-
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 .header {
@@ -105,7 +112,7 @@ body {
 #section-skills {
     margin-top: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 30px;
 }
 
@@ -170,11 +177,24 @@ h1 {
 }
 
 footer {
-    margin-top: 10px;
+    margin-top: auto;
     color: white;
     text-align: center;
     padding: 10px;
 }
+
+
+@media (min-width: 700px) {
+    #section-skills {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .skills {
+        margin-right: 20px;
+    }
+}
+
 
 
 @media (max-width: 700px) {
@@ -187,6 +207,7 @@ footer {
         flex-direction: column;
         justify-content: center;
     }
+
 
     .img-site {
         width: 100%;
